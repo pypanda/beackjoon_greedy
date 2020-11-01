@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int N, a, b, c;
+	scanf("%d", &N);
+	for (a = N / 5; a >= 0; a--)
+	{
+		for (b = N / 3; b >= 0; b--)
+		{
+			if (N == a * 5 + b * 3)
+			{
+				goto exit;
+			}				
+		}
+	}
+
+	printf("-1");
+		return 0;
+
+exit :
+	c = a + b;
+	printf("%d\n", c);
+	return 0;
+}
